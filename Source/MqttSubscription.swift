@@ -17,9 +17,9 @@ public class MqttSubscription {
     public var retainHandling: CocoaRetainHandlingOption
     public var subscriptionOptions: Bool = false
 
-    public init(topic: String) {
+    public init(topic: String, qos: CocoaMQTTQoS = CocoaMQTTQoS.qos1) {
         self.topic = topic
-        self.qos = CocoaMQTTQoS.qos1
+        self.qos = qos
         self.noLocal = false
         self.retainAsPublished = false
         self.retainHandling = CocoaRetainHandlingOption.none
