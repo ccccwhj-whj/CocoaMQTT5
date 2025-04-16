@@ -500,7 +500,7 @@ public class CocoaMQTT5: NSObject, CocoaMQTT5Client {
     ///   - topic: Topic Name or Topic Filter
     ///   - qos: Qos. Default is qos1
     public func subscribe(_ topic: String, qos: CocoaMQTTQoS = .qos1) {
-        let filter = MqttSubscription(topic: topic)
+        let filter = MqttSubscription(topic: topic, qos: qos)
         return subscribe([filter])
     }
 
